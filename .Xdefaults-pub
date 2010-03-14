@@ -1,0 +1,78 @@
+! Add into you  #include ".Xdefaults-pub"
+
+urxvt.geometry: 120x45
+! Bind C-0, C-+ and C-= to activate medium, big and small font size respectively.
+urxvt.font:                            xft:DejaVu Sans Mono
+urxvt.keysym.C-0:     command:\033]710;xft:DejaVu Sans Mono\007
+urxvt.keysym.C-minus: command:\033]710;xft:DejaVu Sans Mono-7\007
+urxvt.keysym.C-equal: command:\033]710;xft:DejaVu Sans Mono-16\007
+
+xterm*geometry:          100x30
+!xterm*boldMode:          false
+xterm*cutNewline:        false
+xterm*on4Clicks:         group
+xterm*on5Clicks:         page
+xterm*internalBorder:    1
+xterm*background:        #2b1712
+xterm*foreground:        light grey
+xterm*metaSendsEscape:   true
+xterm*colorBD:           #ffffff
+xterm*colorBDMode:       false
+xterm*cursorBlink:       false
+xterm*cursorColor:       green
+xterm*dynamiccolors: true
+xterm*utf8: 1
+xterm*loginShell:        true
+xterm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*saveLines:         512
+xterm*faceName: DejaVu Sans Mono:pixelsize=14
+
+
+! ---| xpdf |--- {{{
+xpdf*enableFreetype: yes
+xpdf*antialias: yes
+xpdf*foreground: white
+xpdf*background: black
+xpdf*viKeys: on
+!}}}
+
+
+
+! base colors
+xterm*foreground: #efebcb
+xterm*background: #110000
+
+! black
+*color0:  #111111
+*color8:  #5e5e5e
+
+! red
+*color1:  #c35365
+*color9:  #d7786c
+
+! green
+*color2:  #8d983f
+*color10: #A7D671
+
+! yellow
+*color3:  #d1cb80
+*color11: #f5f19a
+
+! blue
+*color4:  #3d77a1
+*color12: #72afcc
+
+! magenta
+*color5:  #cc74ac
+*color13: #edaed6
+
+! cyan
+*color6:  #6b9d98
+*color14: #accdca
+
+! white
+*color7:  #dbdbdb
+*color15: #fffbdb
+
