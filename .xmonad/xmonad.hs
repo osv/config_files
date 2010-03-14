@@ -3,7 +3,9 @@
 -- 
 -- by Olexandr Sydowrchuk
 --
- 
+-- This config is based on rtalreja's xmonad.hs:
+-- http://www.haskell.org/haskellwiki/Xmonad/Config_archive/rtalreja%27s_xmonad.hs 
+
 -- Import XMonad core, but we will use (|||) from LayoutCombinators
 import XMonad hiding ( (|||) )
 --import XMonad
@@ -33,7 +35,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.UrgencyHook
 import XMonad.Hooks.FadeInactive
  
- 
+
 -- import XMonad.Layout
 import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.Accordion
@@ -137,7 +139,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. altMask,	xK_n	), spawn "mpc next")
     , ((modMask .|. altMask,	xK_p	), spawn "mpc prev")
     , ((modMask,		xK_semicolon	), spawn "mpc toggle")
-    , ((modMask.|. shiftMask,	xK_semicolon	), spawn "mpc play")
+    , ((modMask .|. shiftMask,	xK_semicolon	), spawn "mpc play")
  
     -- launch gmrun
     , ((modMask,		xK_F1	), spawn "gmrun")
@@ -170,7 +172,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask,  xK_x    ), kill)
   
     -- Resize viewed windows to the correct size
-    , ((modMask,             xK_n     ), refresh)
+    , ((modMask,                xK_n    ), refresh)
  
     -- Move focus to the next window
     , ((modMask,                xK_Tab   ), windows W.focusDown)
@@ -185,7 +187,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,                xK_m     ), windows W.focusMaster  )
  
     -- Swap the focused window and the master window
-    , ((modMask .|. shiftMask,  xK_m), windows W.swapMaster)
+    , ((modMask .|. shiftMask,  xK_m     ), windows W.swapMaster)
  
     -- Swap the focused window with the next window
     , ((modMask .|. shiftMask,  xK_j     ), windows W.swapDown  )
@@ -235,23 +237,23 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- Requires Xmonad.Actions.CycleWS
     --
     [
-     ((modMask  		, xK_u	), prevWS)
-    ,((modMask                  , xK_i	), nextWS)
-    ,((modMask                  , xK_Left), prevWS)
+     ((modMask  		, xK_u	  ), prevWS)
+    ,((modMask                  , xK_i	  ), nextWS)
+    ,((modMask                  , xK_Left ), prevWS)
     ,((modMask                  , xK_Right), nextWS)
 
-    ,((modMask .|. shiftMask	, xK_u	), shiftToPrev >> prevWS)
-    ,((modMask .|. shiftMask	, xK_i	), shiftToNext >> nextWS)
-    ,((modMask  		, xK_Left), prevWS)
+    ,((modMask .|. shiftMask	, xK_u	  ), shiftToPrev >> prevWS)
+    ,((modMask .|. shiftMask	, xK_i	  ), shiftToNext >> nextWS)
+    ,((modMask  		, xK_Left ), prevWS)
     ,((modMask          	, xK_Right), nextWS)
-    ,((modMask .|. shiftMask	, xK_Left), shiftToPrev >> prevWS)
+    ,((modMask .|. shiftMask	, xK_Left ), shiftToPrev >> prevWS)
     ,((modMask .|. shiftMask	, xK_Right), shiftToNext >> nextWS)]
     ++
     -- Layout binds
     [
     -- jump to layout
     -- Rotate through the available layout algorithms
-    ((modMask,                xK_Return ), sendMessage NextLayout)
+    ((modMask,                  xK_Return ), sendMessage NextLayout)
     --  Reset the layouts on the current workspace to default
     , ((modMask .|. shiftMask,  xK_Return ), setLayout $ XMonad.layoutHook conf)
     -- mod-C-t Tabbed 
@@ -286,13 +288,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask .|. controlMask, xK_Up   ), sendMessage $ Move U)
     , ((modMask .|. shiftMask .|. controlMask, xK_Down ), sendMessage $ Move D)
     ]
-   ++
-   [
-    ((0,                     0x1008ff14     ), spawn "mpc toggle"),      -- XF86AudioPlay
-    ((0,                     0x1008ff15     ), spawn "mpc stop"),        -- XF86AudioStop
-    ((0,                     0x1008FF16     ), spawn "mpc prev"),        -- XF86AudioPrev
-    ((0,                     0x1008FF17     ), spawn "mpc next")         -- XF86AudioNext
-   ]
  
  
 ------------------------------------------------------------------------
@@ -436,18 +431,16 @@ myLogHook h = dynamicLogWithPP $ defaultPP
 	, ppSep      = "|"
 	, ppLayout   = dzenColor "#00cdcd" "" .
 			  (\ x -> case x of
-			      "Maximize Tall" 			-> "[]="
-			      "Maximize Mirror Tall"		-> "TTT"
-			      "Maximize Full"			-> "<M>"
-			      "Maximize Grid"			-> "+++"
-			      "Maximize Spiral"			-> "(@)"
-			      "Maximize Accordion"		-> "Acc"
-			      "Maximize Tabbed Simplest"	-> "Tab"
-			      "Maximize Tabbed Bottom Simplest"	-> "TaB"
-			      "Maximize SimplestFloat"		-> "><>"
-			      "Maximize IM"			-> "IM "
-			      "Maximize Dishes 2 (1%6)"		-> "Dsh"
-			      _				-> pad x
+			      "Tall"                            -> "[]="
+			      "Mirror Tall"             	-> "TTT"
+			      "Full"                            -> "<M>"
+			      "Grid"                            -> "+++"
+			      "Spiral"                          -> "(@)"
+			      "Accordion"                       -> "Acc"
+			      "Tabbed Simplest"                 -> "Tab"
+			      "Combo 3"                         -> "T=="
+                              "Big Left Column"                 -> "A***|*A"
+			      _                                 -> pad x
 			  )
 	, ppTitle    = (" " ++) . dzenColor "#00c5cd" "" . dzenEscape
 	, ppOutput   = hPutStrLn h

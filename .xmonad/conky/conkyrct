@@ -1,0 +1,12 @@
+background no
+no_buffers yes
+out_to_console yes
+update_interval 2
+uppercase no
+use_spacer no
+total_run_times 0 
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+^fg(#32cd32)^i(/home/osprey/.xmonad/dicon/net_down_03.xbm) ${downspeed re0} ^fg(#ff8c00)^i(/home/osprey/.xmonad/dicon/net_up_03.xbm) ${upspeed re0} ^fg(#646464)| ^fg(green)^i(/home/osprey/.xmonad/dicon/cpu.xbm) ^fg(white)${cpu cpu0}% Ps: ${processes}/^fg(gray)${running_processes} ^fg(#646464)| ^fg(white)${top name 1}${top cpu 1}%^fg(#646464)|^fg(gray)${top name 2}${top cpu 2}% ^fg(#646464)| ^fg(green)^i(/home/osprey/.xmonad/dicon/mem.xbm) ^fg(white) ${memperc}/^fg(gray)${swapperc}% ^fg(#646464)| ^fg(green)^i(/home/osprey/.xmonad/dicon/clock.xbm)^fg(white) ${time %l:%M%p}

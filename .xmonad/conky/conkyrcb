@@ -1,0 +1,12 @@
+background no
+no_buffers yes
+out_to_console yes
+update_interval 4
+uppercase no
+use_spacer no
+total_run_times 0 
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+^fg(green)^i(/home/osprey/.xmonad/dicon/note.xbm) ^fg(#ff8c00)[$mpd_percent] ^fg(gray)$mpd_length ^fg(white)$mpd_smart ^fg(#646464)| ^fg(red)^i(/home/osprey/.xmonad/dicon/bug_01.xbm)^fg(white) ${execi 300 /home/osprey/.xmonad/scripts/status-tremul-thcteam.org-qstat.sh}
