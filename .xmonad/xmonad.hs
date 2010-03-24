@@ -1,3 +1,4 @@
+-- -*-coding: utf-8 -*-
 --
 -- xmonad config file.
 -- 
@@ -431,14 +432,14 @@ myLogHook h = dynamicLogWithPP $ defaultPP
 	, ppSep      = "|"
 	, ppLayout   = dzenColor "#00cdcd" "" .
 			  (\ x -> case x of
-			      "Tall"                            -> "[]="
-			      "Mirror Tall"             	-> "TTT"
-			      "Full"                            -> "<M>"
+			      "Tall"                            -> "├"
+			      "Mirror Tall"             	-> "┬"
+			      "Full"                            -> "◻"
 			      "Grid"                            -> "+++"
 			      "Spiral"                          -> "(@)"
 			      "Accordion"                       -> "Acc"
 			      "Tabbed Simplest"                 -> "Tab"
-			      "Combo 3"                         -> "T=="
+			      "Combo 3"                         -> "TΞΞ"
                               "Big Left Column"                 -> "A***|*A"
 			      _                                 -> pad x
 			  )
