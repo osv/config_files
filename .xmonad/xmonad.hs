@@ -419,7 +419,7 @@ myConkyBarTop = "sleep 2 &&  conky -c ~/.xmonad/conky/conkyrct | dzen2 -fn '-*-t
  
 myConkyBarBot :: String
 --myConkyBar = "sleep 1 && conky -c ~/.conkyrcdzen | dzen2 -fn '-*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*' -bg black -fg green -h 22 -sa c -x 800 -y 1028 -e '' -ta r"
-myConkyBarBot = "sleep 1 &&  conky -c ~/.xmonad/conky/conkyrcb | dzen2 -fn '-*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*' -bg '#311511' -fg green -h 14 -sa c -x 0 -y 1036 -e 'button1=exec:~/.xmonad/scripts/thc-listplayers-qstat.sh' -ta l"
+myConkyBarBot = "sleep 1 &&  conky -c ~/.xmonad/conky/conkyrcb | dzen2 -fn 'IPAUIGothic:pixelsize=13' -bg '#311511' -fg green -h 14 -sa c -x 0 -y 1036 -e 'button1=exec:~/.xmonad/scripts/thc-listplayers-qstat.sh' -ta l"
  
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ defaultPP

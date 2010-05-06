@@ -28,12 +28,12 @@ xterm*jumpScroll:        true
 xterm*multiScroll:       true
 xterm*saveLines:         512
 xterm*faceName: DejaVu Sans Mono:pixelsize=14
-
+xterm*faceNameDoublesize: IPAUIGothic:size=12
 
 ! ---| xpdf |--- {{{
 xpdf*enableFreetype: yes
 xpdf*antialias: yes
-xpdf*foreground: white
+xpdf*foreground: green
 xpdf*background: black
 xpdf*viKeys: on
 !}}}

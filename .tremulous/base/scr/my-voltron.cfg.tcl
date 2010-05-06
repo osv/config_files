@@ -303,6 +303,7 @@ bindTeams DEL {
     {echo ^1You are spectate}
 }
 
+# unbind v key
 set postInstall "$postInstall
 
 unbind v
