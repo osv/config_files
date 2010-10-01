@@ -86,14 +86,14 @@ set prefix ^3.oO(^5
 set sufix ^3)
 
 set 1. {
-    {}			{play $snd_menuon}
+    {^2 ^2}		{play $snd_menuon}
     {Evolve "Evolve to:"} {}
     {Buy "Buy:"} {}
 }
 set 1.1. {  
     ""			{play $snd_menuoff}
     "Dretch"		{class level0}
-    "Construction Kit"	{sell weapons;sell upgrades;class ckit; buy ackit; buy ckit;itemact ackit;itemact ckit}
+    "^5Construction Kit" {sell weapons;sell upgrades;class ckit; buy ackit; buy ckit;itemact ackit;itemact ckit}
 }
 set 1.2. {
     ""			{play $snd_menuoff}
@@ -123,64 +123,64 @@ set 1.6. {
 }
     
 set 1.7. {
-    {}			{play $snd_menuoff}
+    {^6}		{play $snd_menuoff}
     "Adv. Dragoon"	{class level3upg}
     "Chaingun"		{sell weapons;sell weapons;buy chaingun;itemact chaingun}
 }
 
 set 1.8. {
-    ""			{play $snd_menuoff}
+    "^1"		{play $snd_menuoff}
     Tyrant		{class level4}
     "Pulse Rifl"	{sell weapons;sell weapons;buy prifle;itemact prifle;buy battpack}
 }
 set 1.9. {
     ""			{play $snd_menuoff}
-    {Adv goon, asssum}	{class level3upg; vstr AlienJoin}
-    Flamethrower	{sell weapons;sell weapons;buy flamer;itemact flamer}
+    {^3Adv goon, asssum} {class level3upg; vstr AlienJoin}
+    ^1Flamethrower	{sell weapons;sell weapons;buy flamer;itemact flamer}
 }
 
 
 set 1.0. {
     ""			{play $snd_menuoff}
-    Tyrant		{class level4;vstr AlienJoin}
-    "Lucifer Cannon"	{sell weapons;sell weapons;buy lcannon;itemact lcannon;buy battpack}
+    "^3Tyrant, asssum"	{class level4;vstr AlienJoin}
+    "^1Lucifer Cannon"	{sell weapons;sell weapons;buy lcannon;itemact lcannon;buy battpack}
 }
 set 1.-. {
     ""			{play $snd_menuoff}
     {}			{}
-    "Jet Pack"		{sell battpack;sell bsuit;buy helmet;buy larmour;buy jetpack}
+    "^5Jet Pack"	{sell battpack;sell bsuit;buy helmet;buy larmour;buy jetpack}
 }
 set 1.=. {
     ""			{play $snd_menuoff}
     {}			{}
-    Battlesuit		{sell larmour; sell helmet; sell battpack; sell jetpack; buy bsuit}
+    ^5Battlesuit	{sell larmour; sell helmet; sell battpack; sell jetpack; buy bsuit}
 }
 
-set 2. {{Response "Send Response:"} {play $snd_menuon} }
-set 2.1. {Yes "say_team ${prefix}Yes${sufix}" }
-set 2.2. {No "say_team ${prefix}No${sufix}" }
-set 2.3. {Thanks "say_team ${prefix}Thanks${sufix}" }
-set 2.4. {Sorry "say_team ${prefix}Sorry!${sufix}" }
-set 2.5. {Oops "say_team ${prefix}Oops${sufix}" }
-set 2.6. {"I'm attacking" "say_team ${prefix}I'm attacking${sufix}"}
-set 2.7. {"I'm defending" "say_team ${prefix}I'm defending${sufix}"}
-set 2.8. {"I'm building" "say_team ${prefix}I'm building${sufix}"}
-set 2.9. {Grenade "say_team ${prefix}Grenade!${sufix}"}
-set 2.0. {Incoming "say_team ${prefix}Human incoming!${sufix}"}
-set 2.-. {Flank "say_team ${prefix}Flank!${sufix}"}
+set 2. {{^3Response "^3Send Response:"} {play $snd_menuon} }
+set 2.1. {^3Yes "say_team ${prefix}Yes${sufix}" }
+set 2.2. {^3No "say_team ${prefix}No${sufix}" }
+set 2.3. {^3Thanks "say_team ${prefix}Thanks${sufix}" }
+set 2.4. {^3Sorry "say_team ${prefix}Sorry!${sufix}" }
+set 2.5. {^3Oops "say_team ${prefix}Oops${sufix}" }
+set 2.6. {"^1I'm attacking" "say_team ${prefix}I'm attacking${sufix}"}
+set 2.7. {"^2I'm defending" "say_team ${prefix}I'm defending${sufix}"}
+set 2.8. {"^5I'm building" "say_team ${prefix}I'm building${sufix}"}
+set 2.9. {^3Grenade "say_team ${prefix}Grenade!${sufix}"}
+set 2.0. {^3Incoming "say_team ${prefix}Human incoming!${sufix}"}
+set 2.-. {^3Flank "say_team ${prefix}Flank!${sufix}"}
 set 2.=. {"Where to?" "say_team ${prefix}Where to?${sufix}"}
 
-set 3. {{Order "Send Order:"}	{play $snd_menuon} }
-set 3.1. {"I need backup!"	"say_team ${prefix}I need backup!${sufix}"}
-set 3.2. {"We need builders"	"say_team ${prefix}We need builders!${sufix}"}
-set 3.3. {"We need spawns"	"say_team ${prefix}We need spawns!${sufix}"}
-set 3.4. {"We need to regroup"	"say_team ${prefix}We need to regroup!${sufix}"}
-set 3.5. {"Follow me"		"say_team ${prefix}Follow me!${sufix}"}
-set 3.6. {"Attack"		"say_team ${prefix}Attack!${sufix}"}
-set 3.7. {"Defend our base"	"say_team ${prefix}Defend our base!${sufix}"}
-set 3.8. {"Stay alive"		"say_team ${prefix}Stay alive!${sufix}"}
-set 3.9. {"Hold back"		"say_team ${prefix}Hold back!${sufix}"}
-set 3.0. {"Clear the path"	"say_team ${prefix}Clear the path!${sufix}"}
+set 3. {{^3Order "^3Send Order:"}	{play $snd_menuon} }
+set 3.1. {"^3I need backup!"	"say_team ${prefix}I need backup!${sufix}"}
+set 3.2. {"^5We need builders"	"say_team ${prefix}We need builders!${sufix}"}
+set 3.3. {"^3We need spawns"	"say_team ${prefix}We need spawns!${sufix}"}
+set 3.4. {"^3We need to regroup"	"say_team ${prefix}We need to regroup!${sufix}"}
+set 3.5. {"^3Follow me"		"say_team ${prefix}Follow me!${sufix}"}
+set 3.6. {"^1Attack"		"say_team ${prefix}Attack!${sufix}"}
+set 3.7. {"^2Defend our base"	"say_team ${prefix}Defend our base!${sufix}"}
+set 3.8. {"^3Stay alive"		"say_team ${prefix}Stay alive!${sufix}"}
+set 3.9. {"^3Hold back"		"say_team ${prefix}Hold back!${sufix}"}
+set 3.0. {"^3Clear the path"	"say_team ${prefix}Clear the path!${sufix}"}
 set 3.-. {
     {} {}
     "Enemy telenode down"	"say_team ${prefix}Enemy TELENODE down${sufix}"
@@ -192,16 +192,16 @@ set 3.=. {
     "Enemy Overmind down"	"say_team ${prefix}Enemy Overmind down${sufix}"
 }
 
-set 4. { {Build "Build:"} {play $snd_menuon} }
-set 4.1. { {} {}
+set 4. { {^6Build "^6Build:"} {play $snd_menuon} }
+set 4.1. { {^5} {}
     Egg				"build eggpod"
     Telenode			"build telenode"}
 
-set 4.2. { {} {}
+set 4.2. { {^5} {}
     Overmind			"build overmind"
     Reactor			"build reactor"}
 
-set 4.3. { {} {}
+set 4.3. { {^2} {}
     Booster			"build booster"
     Armory			"build arm"}
 
@@ -239,7 +239,7 @@ set 5.0. {!passvote		"!passvote"}
 set 5.-. {!cancelvote		"!cancelvote"}
 set 5.=. {!unlockteams		"!unlock h;!unlock a;vstr menu0"}
 
-set 6. {{"Base state" "Base state:"} {play $snd_menuon}}
+set 6. {{"^3Base state" "^3Base state:"} {play $snd_menuon}}
 set 6.5. { {} {}
     "^1OM 50 percent"		{say_team ${prefix}Our ^1OM^5: \[==========>__________\] 50 perc${sufix}}
     "^1RC 50 percent"		{say_team ${prefix}Our ^1RC^5: \[==========>__________\] 50 perc${sufix}}
@@ -258,11 +258,11 @@ set 6.0. {
     "Base: ^5Clear" {say_team ${prefix}Base clear${sufix}}
 }
 
-set 7. {{"Tactic" "Tactic group:"}	{play $snd_menuon}}
-set 7.1. {"Tunel/vent"			{say_team ${prefix}Tunel/Vent${sufix}} }
-set 7.2. {"Front"			{say_team ${prefix}Front${sufix}} }
-set 7.7. {"Cover me!"			{say_team ${prefix}Cover me!${sufix}} }
-set 7.8. {"I cover you!"		{say_team ${prefix}I cover you${sufix}} }
+set 7. {{"^3Tactic" "^3Tactic group:"}	{play $snd_menuon}}
+set 7.1. {"^3Tunel/vent"		{say_team ${prefix}Tunel/Vent${sufix}} }
+set 7.2. {"^3Front"			{say_team ${prefix}Front${sufix}} }
+set 7.7. {"^3Cover me!"			{say_team ${prefix}Cover me!${sufix}} }
+set 7.8. {"^3I cover you!"		{say_team ${prefix}I cover you${sufix}} }
 
 set 0. {{^1Join "^1Join:"}		{play $snd_menuon} }
 set 0.1. {Alien		{team aliens;exec ui/hud/common/chatmenu_alien_install.cfg;play $snd_menuoff}}
@@ -304,28 +304,99 @@ bindTeams DEL {
 }
 
 # unbind v key
-set postInstall "$postInstall
-
 unbind v
-"
-
+#==============================================
+# Key binds
+#==============================================
 bind j "itemtoggle jetpack"
 
 # Sell armour, suit, grenade, etc
 bind l "sell upgrades;buy ammo"
-bind KP_ENTER "echo ^1Grenade;buy gren;itemact gren"
+# light armor + helmet + battery
 bind LEFTARROW "echo Battery Pack & Armour;sell bsuit;sell jetpack;buy battpack;buy larmour;buy helmet" 
+# prev, but without battery
 bind DOWNARROW "echo Helmet and Light Armour;sell upgrades;buy ammo;buy larmour;buy helmet"
+# battlesuit
 bind RIGHTARROW "echo Battlesuit;sell upgrades;buy bsuit;buy ammo"
+# jet
 bind UPARROW "echo Jetpack & Armour;sell bsuit;sell battpack;buy jetpack;buy helmet;buy larmour;buy ammo"
 
 bind F3 "say_team ^3.oO(^5Sorry^3)"
 bind F4 "say_team ^3.oO(^5Confirmed. Applied your order^3)"
 bind F9 "say  ^1\\o/ ^3.oO(^2Hi^3)"
 bind F10 "say ^1-O-"
-bind F11 "say ^1/ \\"
+bind F11 "say ^1/ \\ "
 bind F12 "screenshotJPEG"
 
+bind home "say ^3.oO(^1emergy reconnecting^3); reconnect"
+
+# swap shift and x key, more optimal for me:)
+bind x "+speed"
+bind SHIFT "boost"
+bind CTRL "+speed"
+
+# fuck, I'm sometimes decon rc, fuckit e key to p key! 
+# e good too togle blaster for me now
+bind e "itemtoggle blaster"
+bind p "deconstruct"
+bind k "buy gren"
+bind g "itemact medkit"
+
+#==============================================
+# KP_* keys
+#==============================================
+bind KP_PLUS "say ^3.oO(^1Burn ^3heretics^1!^3)"
+# special for funserver, buy and activate grenade
+bind KP_ENTER "echo ^1Grenade;buy gren;itemact gren"
+# my name
+bind KP_DEL "seta name ^4O^3lexandr^6@^1FreeBSD"
+# my lsd-name
+bind KP_DOWNARROW "name ^3O^7l^6e^3x^7a^3n^5n^6d^7r^1!"
+# Joking. Petrosyan will cry blood
+bind KP_MINUS "say ^3.oO(^2xD^3)"
+bind KP_END "say_team ^3.oO(^1Meat ^5incoming^3)" ; # Meat incoming, Yeah freshmeat
+# some from my panteon of gods
+bind KP_HOME "say ^3.oO(^2There is no god except ^3H^1a^4r^2u^3h^7i^2 and ^3Kyon ^2is her messenger^3)"
+bind KP_UPARROW "say ^3.oO(^3H^1a^4r^2u^3h^7i^2 akbar^1!^3)"
+bind KP_PGUP "say ^3.oO(^2Good game, ^3H^1a^4r^2u^3h^7i^2 would be satisfied^3)"
+bind KP_PGDN "say ^3.oO(^2Plain game, if ^3H^1a^4r^2u^3h^7i^2 saw this game, she'd  ^1overload world^2, make next game more fun^1!^3)"
+# bind KP_LEFTARROW "say ^3.oO(^4T^3his ^6is ^1SPARTAAA!^3)"
+bind KP_LEFTARROW "say ^3.oO(^2When I come you, you will shit bricks!^3)"
+bind KP_RIGHTARROW "say ^4G^1o^3oooooo^4g^2l^1e ^4e^1a^3t ^3y^2o^1u^3!"
+# bind KP_HOME "say ^3.oO( ^1This ..^3)"
+# bind KP_UPARROW "say ^3.oO( ^1..is..  ^3)"
+# bind KP_PGUP "say ^3.oO( ^1... SPARTA!!! ^3)"
+
+seta cg_drawdot "1"
+seta cg_drawscanner "2"
+seta cg_drawacross "2"
+seta cg_alienxhair "2"
+seta cg_drawstagereport "1"
+seta cg_draw_usable "1"
+seta cg_consolesize "big"
+seta cg_drawfullscreenboost "0"
+seta cg_mappreviewbox "1"
+seta s_musicvolume "0.245"
+seta s_volume "1.000000"
+seta cg_background "3"
+seta cg_loading "1"
+seta cg_flashlight "0"
+seta cg_flashlightx "0"
+seta cg_alienhealthbar "1"
+seta cg_humanhealthbar "1"
+seta cg_teamscore "volt"
+seta cg_lagometer "1"
+seta r_flares "1"
+seta cl_allowDownload "1"
+seta cg_disableWarningDialogs "1"
+seta cg_wwToggle 1                ;# Wall Walk Toggle
+seta cg_wwFollow 0                ;# Wall Walk Auto Pitching
+
+#==============================================
+# Message lists
+# Make sure that text files exist in this 
+# config file's directory
+#==============================================
 
 messages-from-file AlienJoking \
     "Alien.txt"\
