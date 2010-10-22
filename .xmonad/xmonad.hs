@@ -141,6 +141,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. altMask,	xK_p	), spawn "mpc prev")
     , ((modMask,		xK_semicolon	), spawn "mpc toggle")
     , ((modMask .|. shiftMask,	xK_semicolon	), spawn "mpc play")
+    , ((modMask,                xK_KP_Add       ), spawn "mpc volume +5")
+    , ((modMask,                xK_KP_Subtract  ), spawn "mpc volume -5")
  
     -- launch gmrun
     , ((modMask,		xK_F1	), spawn "gmrun")
@@ -176,13 +178,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,                xK_n    ), refresh)
  
     -- Move focus to the next window
-    , ((modMask,                xK_Tab   ), windows W.focusDown)
- 
-    -- Move focus to the next window
-    , ((modMask,                xK_j     ), windows W.focusDown)
+    , ((modMask,                xK_Tab   ), windows W.focusDown )
+    , ((modMask,                xK_j     ), windows W.focusDown )
  
     -- Move focus to the previous window
-    , ((modMask,                xK_k     ), windows W.focusUp  )
+    , ((modMask .|. shiftMask,  xK_Tab   ), windows W.focusUp )
+    , ((modMask,                xK_k     ), windows W.focusUp )
  
     -- Move focus to the master window
     , ((modMask,                xK_m     ), windows W.focusMaster  )
