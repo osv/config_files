@@ -231,13 +231,13 @@ set 5.2. {"!buildlog humans"	"!buildlog h;toggleconsole"}
 set 5.3. {"!buildlog aliens"	"!buildlog a;toggleconsole"}
 set 5.4. {!pause			"!pause 0"}
 set 5.5. {!listplayers		"!listplayers;toggleconsole"}
-set 5.6. {!allready		"!allready"}
+#set 5.6. {!allready		"!allready"}
 set 5.7. {!spec999		"!spec999"}
-set 5.8. {"!lock aliens"		"!lock a;vstr menu0"}
-set 5.9. {"!lock humans"		"!lock h;vstr menu0"}
-set 5.0. {!passvote		"!passvote"}
-set 5.-. {!cancelvote		"!cancelvote"}
-set 5.=. {!unlockteams		"!unlock h;!unlock a;vstr menu0"}
+#set 5.8. {"!lock aliens"		"!lock a;vstr menu0"}
+#set 5.9. {"!lock humans"		"!lock h;vstr menu0"}
+#set 5.0. {!passvote		"!passvote"}
+#set 5.-. {!cancelvote		"!cancelvote"}
+#set 5.=. {!unlockteams		"!unlock h;!unlock a;vstr menu0"}
 
 set 6. {{"^3Base state" "^3Base state:"} {play $snd_menuon}}
 set 6.5. { {} {}
@@ -270,7 +270,7 @@ set 0.2. {Human		{team humans;exec ui/hud/common/chatmenu_human_install.cfg;play
 set 0.3. {Spectate	{team spectate;exec ui/hud/common/chatmenu_spect_install.cfg;play $snd_menuoff}}
 
 
-set 9. {{Messages "Messages:"}	{play sound/misc/menu1.wav} }
+set 9. {{Messages "Messages:"}	{play $snd_menuon} }
 set 9.9. { {} {}
     "Alien fuck hums :P"  "vstr AlienJoking"
     
